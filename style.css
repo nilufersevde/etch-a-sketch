@@ -1,12 +1,14 @@
 .container {
-    background: rgb(158, 152, 152);
+    background: rgb(243, 238, 238);
     display: inline-block;
     border: 1px solid rgb(98, 62, 62);
+    margin-left: 30%;
+    border-radius: 5px;
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(25, 25px);
-    grid-template-rows: repeat(25, 25px);
+    grid-template-columns: repeat(25, 22px);
+    grid-template-rows: repeat(25, 22px);
     grid-gap: 1px;
   }
   .cell {
@@ -18,4 +20,20 @@
     font-size: 3rem;
     font-weight: bold;
     background: white;
+    border-radius: 5px;
   }
+
+.header {
+    display:flex;
+    justify-content: center;
+    font-size: 60px;
+    font-weight:600;
+    margin-bottom: 1.5rem;
+    margin-top: 4.5rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-shadow: 5px 5px white;
+}
+
+body {
+    background-color: rgb(206, 217, 232);
+}

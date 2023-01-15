@@ -11,3 +11,11 @@ for(var i=1; i < 626; i++){
 
 container.appendChild(grid);
 document.body.appendChild(container);
+
+    let items = document.querySelectorAll('.cell');
+    items.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = "black";
+      });
+    });
+  
