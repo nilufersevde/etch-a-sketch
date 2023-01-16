@@ -1,26 +1,25 @@
 .container {
     background: rgb(243, 238, 238);
     display: inline-block;
-    border: 1px solid rgb(98, 62, 62);
+    border: 5px solid rgb(98, 62, 62);
     margin-left: 30%;
-    border-radius: 5px;
+    border-radius: 2px;
+    
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(25, 22px);
-    grid-template-rows: repeat(25, 22px);
     grid-gap: 1px;
+    height: 600px;
+    width: 600px;
+
   }
   .cell {
      /* center the cell content */
     justify-content: center;
     align-items: center;
     display: flex;
-    font-family: Arial;
-    font-size: 3rem;
-    font-weight: bold;
     background: white;
-    border-radius: 5px;
+    border-radius: 2px;
   }
 
 .header {
@@ -36,4 +35,15 @@
 
 body {
     background-color: rgb(206, 217, 232);
+}
+
+.button-container {
+  display:flex;
+  justify-content: center;
+  gap:30px;
+  flex-direction: column;
+}
+
+.button {
+
 }
