@@ -4,6 +4,7 @@
     border: 5px solid rgb(98, 62, 62);
     margin-left: 30%;
     border-radius: 2px;
+    cursor:url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto
     
   }
   .grid {
@@ -41,7 +42,6 @@ body {
   display:flex;
   justify-content: center;
   gap:30px;
-  flex-direction: column;
 }
 
 .button {
