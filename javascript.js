@@ -30,26 +30,6 @@ document.body.appendChild(container);
 //create grid with the default size
 create_grid(20)
 
-
-
-function black() {
-  let items = document.body.querySelectorAll('.cell');
-    items.forEach(item => {
-    item.addEventListener('mouseover', () => {
-    item.style.backgroundColor = "black";
-      });
-  });
-}
-
-function rainbow() {
-  let items = document.body.querySelectorAll('.cell');
-  items.forEach(item => {
-      item.addEventListener('mouseover', () => {
-        item.style.backgroundColor = getRandomColor();
-      });
-    });
-}
-
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
@@ -59,41 +39,89 @@ function getRandomColor() {
   return color;
 }
 
-//function that creates grid with size 20, deletes the grid created before
-function changeGridSize20() {
-  let currentGrid = document.querySelectorAll(".cell");
-  currentGrid.forEach((div) => {
-    return div.remove();
-  });
-  create_grid(20);
+function getgrey() {
+  let colors = [
+    "rgb(88,88,88)",
+    "rgb(96,96,96)",
+    "rgb(104,104,104)",
+    "rgb(105,105,105)",
+    "rgb(112,112,112)",
+    "rgb(120,120,120)",
+    "rgb(128,128,128)",
+    "rgb(136,136,136)",
+    "rgb(144,144,144)",
+    "rgb(152,152,152)",
+    "rgb(160,160,160)",
+    "rgb(168,168,168)",
+    "rgb(169,169,169)",
+    "rgb(176,176,176)",
+    "rgb(184,184,184)",
+  ];
   
+  let random_color = colors[Math.floor(
+        Math.random() * colors.length)];
   
-}
-//function that creates grid with size 50, deletes the grid created before
-function changeGridSize50() {
-  let currentGrid = document.querySelectorAll(".cell");
-  currentGrid.forEach((div) => {
-    return div.remove();
-  });
-  create_grid(50);
+    return random_color
+  }
 
-}
-//function that creates grid with size 75, deletes the grid created before
-function changeGridSize75() {
-  let currentGrid = document.querySelectorAll(".cell");
-  currentGrid.forEach((div) => {
-    return div.remove();
-  });
-  create_grid(75);
-//  let items = document.body.querySelectorAll('.cell');
-}
-
-
-document.getElementById("twenty").addEventListener("mouseup", changeGridSize20);
-document.getElementById("fifty").addEventListener("mouseup", changeGridSize50);
-document.getElementById("seventyfive").addEventListener("mouseup", changeGridSize75);
 document.getElementById("rainbow").addEventListener("mouseup",rainbow);
-document.getElementById("black").addEventListener("mouseup",black)
+function rainbow() {
+  let items = document.body.querySelectorAll('.cell');
+  items.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = getRandomColor();
+      });
+    });
+}
+document.getElementById("black").addEventListener("mouseup",black);
+function black() {
+  let items = document.body.querySelectorAll('.cell');
+    items.forEach(item => {
+    item.addEventListener('mouseover', () => {
+    item.style.backgroundColor = "black";
+      });
+  });
+}
+document.getElementById("reset").addEventListener("mouseup",reset);
+function reset() {
+  let items = document.body.querySelectorAll('.cell');
+  items.forEach(item => {
+        item.style.backgroundColor = "white";
+      });
+    }
+document.getElementById("charcoal").addEventListener("mouseup",charcoal);
+function charcoal() {
+  let items = document.body.querySelectorAll('.cell');
+  items.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = getgrey();
+      });
+  });
+}
+
+document.getElementById("twenty").addEventListener("mouseup", function() {
+  deletecurrentgrid()
+  create_grid(20);
+})
+document.getElementById("fifty").addEventListener("mouseup", function() {
+  deletecurrentgrid()
+  create_grid(50);
+})
+document.getElementById("seventyfive").addEventListener("mouseup", function() {
+  deletecurrentgrid()
+  create_grid(75);
+
+})
+
+
+function deletecurrentgrid() {
+  let currentGrid = document.querySelectorAll(".cell");
+  currentGrid.forEach((div) => {
+    return div.remove();
+  });
+}
+
+
 
   
   
