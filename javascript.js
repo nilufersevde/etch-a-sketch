@@ -30,6 +30,7 @@ document.body.appendChild(container);
 //create grid with the default size
 create_grid(20)
 
+//gets random color for rainbow button
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
@@ -39,6 +40,7 @@ function getRandomColor() {
   return color;
 }
 
+//gets random shades of grey from an array for charcoal button
 function getgrey() {
   let colors = [
     "rgb(88,88,88)",
@@ -64,6 +66,7 @@ function getgrey() {
     return random_color
   }
 
+//paints to reinbow color
 document.getElementById("rainbow").addEventListener("mouseup",rainbow);
 function rainbow() {
   let items = document.body.querySelectorAll('.cell');
@@ -73,6 +76,8 @@ function rainbow() {
       });
     });
 }
+
+//paints to black
 document.getElementById("black").addEventListener("mouseup",black);
 function black() {
   let items = document.body.querySelectorAll('.cell');
@@ -82,6 +87,8 @@ function black() {
       });
   });
 }
+
+//resets the grid 
 document.getElementById("reset").addEventListener("mouseup",reset);
 function reset() {
   let items = document.body.querySelectorAll('.cell');
@@ -89,6 +96,8 @@ function reset() {
         item.style.backgroundColor = "white";
       });
     }
+
+//paints to grey shades
 document.getElementById("charcoal").addEventListener("mouseup",charcoal);
 function charcoal() {
   let items = document.body.querySelectorAll('.cell');
@@ -99,14 +108,18 @@ function charcoal() {
   });
 }
 
+
+//creates a grid with 20 size in a row and column
 document.getElementById("twenty").addEventListener("mouseup", function() {
   deletecurrentgrid()
   create_grid(20);
 })
+//creates a grid with 50 size in a row and column
 document.getElementById("fifty").addEventListener("mouseup", function() {
   deletecurrentgrid()
   create_grid(50);
 })
+//creates a grid with 75 size in a row and column
 document.getElementById("seventyfive").addEventListener("mouseup", function() {
   deletecurrentgrid()
   create_grid(75);

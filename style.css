@@ -28,7 +28,7 @@
 .header {
     display:flex;
     justify-content: center;
-    font-size: 60px;
+    font-size: 70px;
     font-weight:600;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
@@ -43,14 +43,57 @@ body {
 .button-container {
   display:flex;
   justify-content: center;
-  gap:29px;
+  gap:50px;
   margin: 20px;
 }
 .button {
   font-size: medium;
-  height: 40px;
+  font-weight:bold;
+  height: 45px;
   width: 100px;
   background-color: rgb(158, 225, 14);
   box-shadow: 5px 5px;
   font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#rainbow {
+  position: absolute;
+  bottom: 375px;
+  left:250px;
+  height: 50px;
+
+}
+#black {
+  position: absolute;
+  bottom: 275px;
+  left:250px;
+  height: 50px;
+
+}
+#charcoal{
+  position: absolute;
+  bottom: 175px;
+  left:250px;
+  height: 50px;
+
+}
+
+#reset {
+  position: absolute;
+  bottom: 75px;
+  left:250px;
+  height: 50px;
+}
+
+.style {
+  position: absolute;
+  bottom: 475px;
+  left:230px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+}
+
+.size {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
 }
